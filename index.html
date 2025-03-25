@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>B V Nagi Reddy | Software Developer</title>
+    <meta name="description" content="Portfolio of B V Nagi Reddy, Software Developer specializing in Python, Java, and backend development">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="loader">
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+            <span class="circle"></span>
+        </div>
+    </div>
+
+    <!-- Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="#home">
+                        <span class="logo-text">BV</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                </div>
+                <div class="nav-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="animate-text">
+                        <span class="greeting">Hello, I'm</span>
+                        <span class="name">B V Nagi Reddy</span>
+                        <span class="title">Software Developer</span>
+                    </h1>
+                    <p class="hero-description">
+                        Expertise in Python and Java, specializing in backend development, API engineering, and problem-solving.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                        <a href="#projects" class="btn btn-outline">View Projects</a>
+                    </div>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/b-v-nagi-reddy-741612203/" target="_blank" class="social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Niteesh57" target="_blank" class="social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:nagireddybv5@gmail.com" class="social-link">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-background">
+            <div class="particles-container"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <p class="section-subtitle">My Introduction</p>
+            </div>
+
+            <div class="about-content">
+                <div class="about-info">
+                    <p class="about-description">
+                        Software Development Engineer with expertise in Python and Java, specializing in backend development, API engineering, and problem-solving. Passionate about innovations in software architecture, designing high-performance RESTful and GraphQL APIs, and optimizing database queries. Experienced in implementing secure authentication solutions and building complex systems using Data Structures and Algorithms. Skilled in Docker, and CI/CD pipelines, ensuring scalable, high-concurrency architectures while delivering robust services that align with best software development practices.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number"><span class="counter" data-target="3">0</span>+</div>
+                            <div class="stat-title">Years of Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number"><span class="counter" data-target="15">0</span>+</div>
+                            <div class="stat-title">Projects Completed</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number"><span class="counter" data-target="10">0</span>+</div>
+                            <div class="stat-title">Technologies</div>
+                        </div>
+                    </div>
+
+                    <div class="about-cta">
+                        <a href="#" class="btn btn-primary">Download CV</a>
+                    </div>
+                </div>
+
+                <div class="about-skills">
+                    <h3 class="skills-title">Technical Skills</h3>
+
+                    <div class="skill-tabs">
+                        <div class="skill-tab active" data-tab="languages">Languages</div>
+                        <div class="skill-tab" data-tab="frontend">Frontend</div>
+                        <div class="skill-tab" data-tab="backend">Backend</div>
+                        <div class="skill-tab" data-tab="tools">Tools & DevOps</div>
+                    </div>
+
+                    <div class="skill-content active" id="languages">
+                        <div class="skill-tag">Python</div>
+                        <div class="skill-tag">Java</div>
+                        <div class="skill-tag">PHP</div>
+                        <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">TypeScript</div>
+                        <div class="skill-tag">SQL</div>
+                    </div>
+
+                    <div class="skill-content" id="frontend">
+                        <div class="skill-tag">HTML5</div>
+                        <div class="skill-tag">CSS3</div>
+                        <div class="skill-tag">JavaScript</div>
+                        <div class="skill-tag">React</div>
+                    </div>
+
+                    <div class="skill-content" id="backend">
+                        <div class="skill-tag">Laravel</div>
+                        <div class="skill-tag">Django</div>
+                        <div class="skill-tag">Spring Boot</div>
+                        <div class="skill-tag">Node.js</div>
+                        <div class="skill-tag">FastAPI</div>
+                        <div class="skill-tag">GraphQL</div>
+                        <div class="skill-tag">RESTful APIs</div>
+                    </div>
+
+                    <div class="skill-content" id="tools">
+                        <div class="skill-tag">Git</div>
+                        <div class="skill-tag">Docker</div>
+                        <div class="skill-tag">AWS</div>
+                        <div class="skill-tag">Azure</div>
+                        <div class="skill-tag">CI/CD</div>
+                        <div class="skill-tag">MySQL</div>
+                        <div class="skill-tag">PostgreSQL</div>
+                        <div class="skill-tag">MongoDB</div>
+                        <div class="skill-tag">Redis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Experience</h2>
+                <p class="section-subtitle">My Professional Journey</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="time-period">August 2024 - Present</div>
+                        <h3 class="timeline-title">Pravasy Admin Application (PaaS)</h3>
+                        <h4 class="timeline-company">Nellsys Technologies PVT LTD</h4>
+                        <ul class="timeline-description">
+                            <li>Architected and developed scalable Laravel-based full-stack applications, leveraging MVC architecture, SOLID principles, and OOP to ensure maintainability, high performance, and timely project delivery.</li>
+                            <li>Engineered core system modules, integrating real-time metrics and a Payment Model (Pay-By-UPI, Bank, Cash), optimizing transactional workflows and improving efficiency by 40% for 25+ users while enhancing query performance by 40%.</li>
+                            <li>Designed and optimized RESTful APIs, implementing Java-based asynchronous processing for push notifications and invoicing, resulting in 100% faster execution and system reliability.</li>
+                            <li>Led system deployment and infrastructure optimization, achieving a 90% deployment success rate, enhancing backend architecture, and ensuring scalability and fault tolerance.</li>
+                            <li>Drove technical excellence, mentoring other developers, enforcing secure coding practices, and fostering collaborative system design for high-availability applications.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Node.js</span>
+                            <span class="tag">Express.js</span>
+                            <span class="tag">MVC</span>
+                            <span class="tag">RESTful API</span>
+                            <span class="tag">Java</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="time-period">March 2024 - June 2024</div>
+                        <h3 class="timeline-title">Generative AI PDF Summarization Tool</h3>
+                        <h4 class="timeline-company">Nellsys Technologies PVT LTD</h4>
+                        <ul class="timeline-description">
+                            <li>Developed an NLP & Deep Learning-based PDF summarization tool, reducing processing time by 50% and improving accuracy by 35%.</li>
+                            <li>Supervised custom LSTM model development, enhancing Neural Network efficiency for improved text summarization.</li>
+                            <li>Built a Django-based MVT architecture, leveraging FastAPI microservices for high-performance asynchronous processing of PDF uploads and summaries.</li>
+                            <li>Integrated PostgreSQL with Django ORM, improving query performance, data retrieval speed, and ensuring database integrity.</li>
+                            <li>Applied OOP principles for a scalable, maintainable, and modular NLP-based system, enhancing system reliability.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">NLP</span>
+                            <span class="tag">LSTM</span>
+                            <span class="tag">Django</span>
+                            <span class="tag">FastAPI</span>
+                            <span class="tag">PostgreSQL</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Projects</h2>
+                <p class="section-subtitle">My Recent Work</p>
+            </div>
+
+            <div class="project-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="api">API</button>
+                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+            </div>
+
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="backend api">
+                    <div class="project-img">
+                        <img src="https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg" alt="Spring Boot API Project">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tag">Spring Boot API</div>
+                        <h3 class="project-title">Spring Boot API</h3>
+                        <p class="project-description">
+                            Architected scalable backend systems using Spring Boot, implementing Spring Core (DI, Bean Lifecycle) and AOP for modular and maintainable application design.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Redis caching and Hibernate ORM</li>
+                                <li>JWT-based authentication and RBAC</li>
+                                <li>Spring Actuator monitoring</li>
+                                <li>Automated deployment with PowerShell</li>
+                            </ul>
+                        </div>
+                        <div class="project-technologies">
+                            <span class="tech-tag">Java</span>
+                            <span class="tech-tag">Spring Boot</span>
+                            <span class="tech-tag">Redis</span>
+                            <span class="tech-tag">Hibernate</span>
+                            <span class="tech-tag">JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank"><i class="fas fa-globe"></i></a>
+                            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="backend api">
+                    <div class="project-img">
+                        <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" alt="Node.js Web Application">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tag">Node.js MVC Application</div>
+                        <h3 class="project-title">Node.js Web Application</h3>
+                        <p class="project-description">
+                            Designed a modular and scalable backend using Node.js MVC architecture, ensuring structured separation of concerns and attention to detail.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>GraphQL & REST APIs</li>
+                                <li>Docker containerization</li>
+                                <li>Multithreading with worker threads</li>
+                                <li>Optimized database architecture</li>
+                            </ul>
+                        </div>
+                        <div class="project-technologies">
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">GraphQL</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">MVC</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank"><i class="fas fa-globe"></i></a>
+                            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="api">
+                    <div class="project-img">
+                        <img src="https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_1280.jpg" alt="Social Context API">
+                    </div>
+                    <div class="project-info">
+                        <div class="project-tag">FastAPI Backend</div>
+                        <h3 class="project-title">Social Context API</h3>
+                        <p class="project-description">
+                            Developed a secure and scalable API using FastAPI, implementing JWT authentication and RBAC to restrict access to endpoints based on user roles.
+                        </p>
+                        <div class="project-features">
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Role-based access control</li>
+                                <li>Swagger UI documentation</li>
+                                <li>Token-based authorization</li>
+                                <li>Database indexing for performance</li>
+                            </ul>
+                        </div>
+                        <div class="project-technologies">
+                            <span class="tech-tag">FastAPI</span>
+                            <span class="tech-tag">JWT</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Swagger</span>
+                            <span class="tech-tag">RBAC</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link" target="_blank"><i class="fas fa-globe"></i></a>
+                            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Education & Certifications</h2>
+                <p class="section-subtitle">Academic Background</p>
+            </div>
+
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-header">
+                        <div class="education-icon">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="education-title">
+                            <h3>Bachelor's Engineering</h3>
+                            <p>Computer Science and Engineering</p>
+                        </div>
+                    </div>
+                    <div class="education-body">
+                        <div class="education-details">
+                            <p class="education-institution">Saveetha School of Engineering</p>
+                            <p class="education-location">Chennai, Tamilnadu</p>
+                            <p class="education-years">August 2019 - June 2023</p>
+                        </div>
+                        <div class="education-achievements">
+                            <h4>Achievements:</h4>
+                            <ul>
+                                <li>Award for Academic Excellence (Top 200 Students, 2022)</li>
+                                <li>Final Year Project Recognized in Top 2%</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="certifications">
+                    <h3 class="certifications-title">Professional Certifications</h3>
+
+                    <div class="certification-cards">
+                        <div class="certification-card">
+                            <div class="certification-icon">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <div class="certification-info">
+                                <h4>AZ-305: Designing Microsoft Azure Infrastructure Solutions</h4>
+                                <p>Microsoft</p>
+                            </div>
+                        </div>
+
+                        <div class="certification-card">
+                            <div class="certification-icon">
+                                <i class="fab fa-microsoft"></i>
+                            </div>
+                            <div class="certification-info">
+                                <h4>AZ-900: Microsoft Azure Fundamentals</h4>
+                                <p>Microsoft</p>
+                            </div>
+                        </div>
+
+                        <div class="certification-card">
+                            <div class="certification-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div class="certification-info">
+                                <h4>Data Analyst</h4>
+                                <p>Tranity</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Contact Me</h2>
+                <p class="section-subtitle">Get In Touch</p>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h3>Location</h3>
+                            <p>Hyderabad, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h3>Email</h3>
+                            <p><a href="mailto:nagireddybv5@gmail.com">nagireddybv5@gmail.com</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-card-content">
+                            <h3>Phone</h3>
+                            <p><a href="tel:+916304302914">+91 6304302914</a></p>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="https://www.linkedin.com/in/b-v-nagi-reddy-741612203/" target="_blank" class="contact-social-link">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Niteesh57" target="_blank" class="contact-social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:nagireddybv5@gmail.com" class="contact-social-link">
+                            <i class="far fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#home">
+                        <span class="logo-text">BV</span>
+                        <span class="logo-dot"></span>
+                    </a>
+                </div>
+                <p class="footer-text">Building elegant software solutions with code and passion.</p>
+                <div class="footer-socials">
+                    <a href="https://linkedin.com/in/" target="_blank" class="footer-social-link">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/" target="_blank" class="footer-social-link">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:nagireddybv5@gmail.com" class="footer-social-link">
+                        <i class="far fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 B V Nagi Reddy. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <a href="#home" class="back-to-top">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
