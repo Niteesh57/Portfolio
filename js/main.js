@@ -1,3 +1,50 @@
+// ----- SCROLL ANIMATIONS -----
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe skill items and other animated elements
+document.addEventListener('DOMContentLoaded', () => {
+    const animatedElements = document.querySelectorAll('.skill-item, .tech-item, .timeline-item, .project-card');
+    animatedElements.forEach(el => {
+        observer.observe(el);
+    });
+});
+
+// ----- DEVICON FALLBACK -----
+document.addEventListener('DOMContentLoaded', () => {
+    // Map of technologies to their correct Devicon classes
+    const deviconMap = {
+        'express': 'devicon-express-original',
+        'swagger': 'devicon-swagger-plain',
+        'vuejs': 'devicon-vuejs-plain',
+        'tensorflow': 'devicon-tensorflow-original',
+        'pytorch': 'devicon-pytorch-original'
+    };
+
+    // Check for missing or incorrect Devicon classes
+    const techIcons = document.querySelectorAll('[class*="devicon-"]');
+    techIcons.forEach(icon => {
+        const classes = icon.className;
+        // Add fallback for missing icons
+        icon.addEventListener('error', () => {
+            // If icon fails to load, add a backup style
+            icon.style.fontSize = '2rem';
+            icon.style.color = '#4f46e5';
+        });
+    });
+});
+
 // ----- PRELOADER -----
 window.addEventListener('load', () => {
     const preloader = document.querySelector('.preloader');
