@@ -1,37 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>B V Nagi Reddy | Software Developer</title>
-    <meta name="description" content="Portfolio of B V Nagi Reddy, Software Developer specializing in Python, Java, and backend development">
+    <title>Nagi Reddy B V | AI Engineer — Backend & Agentic Systems</title>
+    <meta name="description"
+        content="Portfolio of Nagi Reddy B V — AI Engineer specialising in agentic systems, multimodal RAG, backend engineering, and cloud-native infrastructure.">
+
+    <!-- Styles -->
     <link rel="stylesheet" href="css/styles.css">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Devicon for technology icons -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- Devicons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
+
     <!-- Preloader -->
-    <div class="preloader">
-        <div class="loader">
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
-            <span class="circle"></span>
+    <div class="preloader" id="preloader">
+        <div class="preloader-inner">
+            <div class="preloader-logo">BV<span class="preloader-dot"></span></div>
         </div>
     </div>
 
-    <!-- Cursor -->
-    <div class="cursor"></div>
-    <div class="cursor-follower"></div>
-
-    <!-- Navigation -->
-    <header class="header">
+    <!-- ===== HEADER / NAVBAR ===== -->
+    <header class="header" id="header">
         <div class="container">
             <nav class="navbar">
                 <div class="logo">
@@ -40,18 +44,22 @@
                         <span class="logo-dot"></span>
                     </a>
                 </div>
-                <div class="nav-toggle">
-                    <div class="hamburger">
+
+                <div class="nav-toggle" id="nav-toggle">
+                    <div class="hamburger" id="hamburger">
                         <span></span>
                         <span></span>
                         <span></span>
                     </div>
                 </div>
-                <ul class="nav-menu">
+
+                <ul class="nav-menu" id="nav-menu">
                     <li><a href="#home" class="nav-link active">Home</a></li>
                     <li><a href="#about" class="nav-link">About</a></li>
                     <li><a href="#experience" class="nav-link">Experience</a></li>
                     <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#awards" class="nav-link">Awards</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#education" class="nav-link">Education</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
@@ -59,679 +67,775 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
+    <!-- ===== HERO SECTION ===== -->
     <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
+                <!-- Left: Text -->
                 <div class="hero-text">
-                    <h1 class="animate-text">
-                        <span class="greeting">Hello, I'm</span>
-                        <span class="name">Nagi Reddy B V</span>
-                        <span class="title">Software Developer</span>
-                    </h1>
+                    <p class="greeting">
+                        <span class="greeting-line"></span>
+                        Hello, I'm
+                    </p>
+                    <h1 class="hero-name">Nagi Reddy B V</h1>
+                    <div class="hero-title-wrap">
+                        <span class="typewriter-text" id="typewriter-text">AI Engineer</span><span
+                            class="typewriter-cursor">|</span>
+                    </div>
                     <p class="hero-description">
-                        Backend & AI Software Developer with 1.8+ years of experience in building scalable microservice-based systems using Python, Java, and PHP. Skilled in FastAPI, Django, Kafka, and Docker, with hands-on experience in AI-driven data pipelines and semantic search using LangChain, FAISS, and LangGraph. Passionate about designing intelligent, high-performance platforms that deliver real-world business impact.
+                        I build AI-powered products and the backend and cloud infrastructure that make them work in real
+                        environments. My work spans multi-agent systems, multimodal RAG, autonomous desktop agents,
+                        Kubernetes operations, and scalable backend services.
                     </p>
                     <div class="hero-cta">
-                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                        <a href="#projects" class="btn btn-outline">View Projects</a>
+                        <a href="#contact" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Get In Touch</a>
+                        <a href="#projects" class="btn btn-secondary"><i class="fas fa-layer-group"></i> View
+                            Projects</a>
+                        <a href="static/Resume_Nagi_Reddy_BV.pdf" class="btn btn-outline" target="_blank" download="AI Engineer - B V NAGI REDDY.pdf"><i class="fas fa-download"></i> Resume</a>
+                        <div class="hero-social-links">
+                            <a href="https://www.linkedin.com/in/b-v-nagi-reddy-741612203/" target="_blank"
+                                class="social-btn" title="LinkedIn" aria-label="LinkedIn"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/Niteesh57" target="_blank" class="social-btn" title="GitHub"
+                                aria-label="GitHub"><i class="fab fa-github"></i></a>
+                            <a href="mailto:nagireddybv5@gmail.com" class="social-btn" title="Email"
+                                aria-label="Email"><i class="far fa-envelope"></i></a>
+                            <a href="https://www.youtube.com/channel/UC2TeREKWZaMajhcaQkg6eZA" target="_blank"
+                                class="social-btn" title="YouTube" aria-label="YouTube"><i
+                                    class="fab fa-youtube"></i></a>
+                        </div>
                     </div>
-                    
-                    <!-- Quick Tech Stack -->
                     <div class="hero-tech-stack">
-                        <p class="hero-tech-label">Working with</p>
-                        <div class="hero-tech-icons">
+                        <p class="tech-label">// Primary stack</p>
+                        <div class="tech-icons">
                             <i class="devicon-python-plain colored" title="Python"></i>
-                            <i class="devicon-java-plain colored" title="Java"></i>
-                            <i class="devicon-javascript-plain colored" title="JavaScript"></i>
                             <i class="devicon-go-plain colored" title="Go"></i>
+                            <i class="devicon-java-plain colored" title="Java"></i>
                             <i class="devicon-fastapi-original colored" title="FastAPI"></i>
-                            <i class="devicon-docker-plain colored" title="Docker"></i>
+                            <i class="devicon-kubernetes-plain colored" title="Kubernetes"></i>
                             <i class="devicon-amazonwebservices-plain-wordmark colored" title="AWS"></i>
-                            <i class="devicon-postgresql-plain colored" title="PostgreSQL"></i>
+                            <i class="devicon-googlecloud-plain colored" title="Google Cloud"></i>
+                            <i class="devicon-docker-plain colored" title="Docker"></i>
                         </div>
                     </div>
                 </div>
-                
+
+                <!-- Right: Profile Image -->
                 <div class="hero-image">
-                    <div class="profile-container">
-                        <div class="profile-image">
-                            <img src="static\Image.png" alt="Nagi Reddy B V" class="profile-img">
-                            <div class="profile-border"></div>
+                    <div class="profile-wrapper">
+                        <div class="profile-img-wrap">
+                            <img src="static/Image.png" alt="Nagi Reddy B V" class="profile-img">
                         </div>
-                        <!-- <div class="floating-elements">
-                            <div class="floating-icon" style="--delay: 0s">
-                                <i class="devicon-python-plain colored"></i>
-                            </div>
-                            <div class="floating-icon" style="--delay: 1s">
-                                <i class="devicon-java-plain colored"></i>
-                            </div>
-                            <div class="floating-icon" style="--delay: 2s">
-                                <i class="devicon-javascript-plain colored"></i>
-                            </div>
-                            <div class="floating-icon" style="--delay: 3s">
-                                <i class="devicon-react-original colored"></i>
-                            </div>
-                        </div> -->
                     </div>
                 </div>
-                
-                <div class="hero-socials">
-                    <a href="https://www.linkedin.com/in/b-v-nagi-reddy-741612203/" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/Niteesh57" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:nagireddybv5@gmail.com" class="social-link">
-                        <i class="far fa-envelope"></i>
-                    </a>
-                </div>
             </div>
-            <div class="scroll-indicator">
-                <div class="mouse">
-                    <div class="wheel"></div>
-                </div>
-                <div class="arrow">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-        </div>
-        <div class="hero-background">
-            <div class="particles-container"></div>
         </div>
     </section>
 
-    <!-- About Section -->
+    <!-- ===== STATS BAR ===== -->
+    <div class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number">
+                        <span class="counter" data-target="3">0</span><span class="stat-suffix">+</span>
+                    </div>
+                    <div class="stat-label">Years Experience</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal">
+                    <div class="stat-number">
+                        <span class="counter" data-target="8">0</span>
+                    </div>
+                    <div class="stat-label">AI Projects</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal">
+                    <div class="stat-number">
+                        <span class="counter" data-target="3">0</span>
+                    </div>
+                    <div class="stat-label">Companies</div>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item reveal">
+                    <div class="stat-number">
+                        <span class="counter" data-target="4">0</span>
+                    </div>
+                    <div class="stat-label">Hackathon Awards</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== ABOUT SECTION ===== -->
     <section id="about" class="about">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">About Me</h2>
-                <p class="section-subtitle">My Introduction</p>
+                <h2 class="section-title reveal">About Me</h2>
+                <p class="section-subtitle reveal">// engineering profile</p>
             </div>
 
-            <div class="about-content">
-                <div class="about-info">
-                    <p class="about-description">
-                        I’m a Backend & AI Software Developer with 1.8+ years of experience in developing scalable, distributed, and data-driven systems. I specialize in asynchronous backend development, microservices, and AI/ML integration, leveraging frameworks like FastAPI, Django, and Spring Boot, and tools like Kafka, Redis, Airflow, and Docker to ensure reliability and performance.
-
-At Buildnetic, I led the development of multiple backend systems and data pipelines that processed over 100K+ structured records, integrated AI-driven semantic search and product matching using FAISS and transformer embeddings, and deployed scalable APIs handling 25K+ concurrent users per server. My experience also includes LangChain and LangGraph chatbot integration, GPU-optimized response systems, and automated ETL workflows using Airflow and cloud deployments (AWS/GCP).
-
-Previously, at Nellsys Technologies, I engineered REST APIs, CI/CD pipelines, and modular backend systems in Java and PHP, improving system performance and delivery efficiency.
-
-I’m passionate about combining backend engineering and AI innovation to build intelligent, automated, and scalable platforms that make data useful and actionable.
+            <div class="about-grid">
+                <!-- Left: Bio -->
+                <div class="about-text reveal">
+                    <p>
+                        I'm an <span class="about-highlight">AI Engineer</span> with 3+ years of software engineering
+                        experience building production-grade AI applications, distributed backend systems, and
+                        cloud-native platforms.
                     </p>
-
-                    <div class="about-stats">
-                        <div class="stat-item">
-                            <div class="stat-number"><span class="counter" data-target="2">0</span>+</div>
-                            <div class="stat-title">Years of Experience</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number"><span class="counter" data-target="50">0</span>+</div>
-                            <div class="stat-title">APIs Developed</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number"><span class="counter" data-target="15">0</span>+</div>
-                            <div class="stat-title">Technologies</div>
-                        </div>
-                    </div>
-
+                    <p>
+                        My work spans <span class="about-highlight">multi-agent orchestration</span>, multimodal
+                        retrieval-augmented generation, autonomous desktop agents, Kubernetes operations at scale, and
+                        AI evaluation pipelines. I'm currently building IoT video-streaming infrastructure for ~100K
+                        devices and a multimodal manufacturing AI assistant at Kamikaze Solution.
+                    </p>
+                    <p>
+                        I'm particularly interested in systems where AI is one part of a larger engineering picture —
+                        retrieval, state, APIs, security, observability, and deployment all matter as much as the model
+                        itself.
+                    </p>
                     <div class="about-cta">
-                        <a href="static\Resume Nagi Reddy-Bv.pdf" class="btn btn-primary">Download CV</a>
+                        <a href="static/Resume_Nagi_Reddy_BV.pdf" class="btn btn-primary" target="_blank" download="AI Engineer - B V NAGI REDDY.pdf">
+                            <i class="fas fa-download"></i> Download Resume
+                        </a>
+                        <a href="#contact" class="btn btn-outline">
+                            <i class="fas fa-comments"></i> Let's Talk
+                        </a>
                     </div>
                 </div>
 
-                <div class="about-skills">
-                    <h3 class="skills-title">Technical Skills</h3>
-
-                    <div class="skill-tabs">
-                        <div class="skill-tab active" data-tab="languages">Programming</div>
-                        <div class="skill-tab" data-tab="backend">Backend & Frameworks</div>
-                        <div class="skill-tab" data-tab="databases">Big Data & Data Eng.</div>
-                        <div class="skill-tab" data-tab="cloud">Cloud & Infrastructure</div>
-                        <div class="skill-tab" data-tab="aiml">AI/ML & GenAI</div>
-                        <div class="skill-tab" data-tab="web">Tools & Automation</div>
-                        <div class="skill-tab" data-tab="software">Software Engineering</div>
-                    </div>
-
-                    <div class="skill-content active" id="languages">
-                        <div class="skill-item">
-                            <i class="devicon-python-plain colored"></i>
-                            <span>Python</span>
+                <!-- Right: Philosophy cards -->
+                <div class="philosophy-cards reveal">
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon">
+                            <i class="fas fa-layer-group"></i>
                         </div>
-                        <div class="skill-item">
-                            <i class="devicon-java-plain colored"></i>
-                            <span>Java</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-go-plain colored"></i>
-                            <span>Go</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-javascript-plain colored"></i>
-                            <span>JavaScript</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-php-plain colored"></i>
-                            <span>PHP</span>
+                        <div class="philosophy-body">
+                            <h4>Full-Stack AI Thinking</h4>
+                            <p>Treat AI as part of a complete system: retrieval, APIs, state, security, observability,
+                                and deployment matter.</p>
                         </div>
                     </div>
-
-                    <div class="skill-content" id="backend">
-                        <div class="skill-item">
-                            <i class="devicon-fastapi-original colored"></i>
-                            <span>FastAPI</span>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon">
+                            <i class="fas fa-chart-line"></i>
                         </div>
-                        <div class="skill-item">
-                            <i class="devicon-spring-plain colored"></i>
-                            <span>Spring Boot</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-nodejs-plain colored"></i>
-                            <span>Node.js</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-laravel-plain colored"></i>
-                            <span>Laravel</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-django-plain colored"></i>
-                            <span>Django</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-cubes"></i>
-                            <span>Microservices</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-api"></i>
-                            <span>REST APIs</span>
+                        <div class="philosophy-body">
+                            <h4>Measurable Evaluation</h4>
+                            <p>Prefer quantified evaluation over subjective quality claims — LLM-as-a-Judge, relevance
+                                benchmarks, and traces.</p>
                         </div>
                     </div>
-
-                    <div class="skill-content" id="databases">
-                        <div class="skill-item">
-                            <i class="devicon-apachekafka-original"></i>
-                            <span>Kafka</span>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon">
+                            <i class="fas fa-microchip"></i>
                         </div>
-                        <div class="skill-item">
-                            <i class="fas fa-project-diagram"></i>
-                            <span>ETL Pipelines</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-apacheairflow-plain colored"></i>
-                            <span>Apache Airflow</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-mongodb-plain colored"></i>
-                            <span>NoSQL (MongoDB)</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>SQL</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-redis-plain colored"></i>
-                            <span>In-Memory DBs</span>
+                        <div class="philosophy-body">
+                            <h4>Edge & Efficiency</h4>
+                            <p>Explore local inference, on-device AI, and ARM model optimization where connectivity and
+                                resources are constrained.</p>
                         </div>
                     </div>
-
-                    <div class="skill-content" id="cloud">
-                        <div class="skill-item">
-                            <i class="devicon-azure-plain colored"></i>
-                            <span>Azure</span>
+                    <div class="philosophy-card">
+                        <div class="philosophy-icon">
+                            <i class="fas fa-user-shield"></i>
                         </div>
-                        <div class="skill-item">
-                            <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
-                            <span>AWS</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-googlecloud-plain colored"></i>
-                            <span>GCP</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-docker-plain colored"></i>
-                            <span>Docker</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-kubernetes-plain colored"></i>
-                            <span>Kubernetes</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-linux-plain colored"></i>
-                            <span>Linux</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-infinity"></i>
-                            <span>CI/CD</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-github-original"></i>
-                            <span>GitHub</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="devicon-gitlab-plain"></i>
-                            <span>GitLab</span>
+                        <div class="philosophy-body">
+                            <h4>Human-in-the-Loop</h4>
+                            <p>Use human approval for sensitive autonomous actions. Autonomous systems must remain
+                                auditable and controllable.</p>
                         </div>
                     </div>
-
-                    <div class="skill-content" id="aiml">
-                        <div class="skill-item">
-                            <i class="fas fa-robot"></i>
-                            <span>LangChain</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-project-diagram"></i>
-                            <span>LangGraph</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-database"></i>
-                            <span>FAISS</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-vector-square"></i>
-                            <span>Vector Embeddings</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-robot"></i>
-                            <span>Transformer Models</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-brain"></i>
-                            <span>Neural Networks</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-content" id="web">
-                        <div class="skill-item">
-                            <i class="devicon-selenium-original colored"></i>
-                            <span>Selenium</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-theater-masks"></i>
-                            <span>Playwright</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-terminal"></i>
-                            <span>Unix Shell Scripting</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-code-branch"></i>
-                            <span>Version Control</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-cogs"></i>
-                            <span>Automation Tools</span>
-                        </div>
-                    </div>
-
-                    <div class="skill-content" id="software">
-                        <div class="skill-item">
-                            <i class="fas fa-project-diagram"></i>
-                            <span>SDLC</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-users-cog"></i>
-                            <span>Agile</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-object-group"></i>
-                            <span>OOP</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-chart-area"></i>
-                            <span>Monitoring & Logging</span>
-                        </div>
-                        <div class="skill-item">
-                            <i class="fas fa-check-circle"></i>
-                            <span>Best Practices</span>
-                        </div>
-                    </div>
-
-                    
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Experience Section -->
+    <!-- ===== EXPERIENCE SECTION ===== -->
     <section id="experience" class="experience">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Experience</h2>
-                <p class="section-subtitle">My Professional Journey</p>
+                <h2 class="section-title reveal">Experience</h2>
+                <p class="section-subtitle reveal">// professional journey</p>
             </div>
 
             <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="time-period">May 2025 - Present</div>
-                        <h3 class="timeline-title">Software Developer</h3>
-                        <h4 class="timeline-company">Buildnetic</h4>
-                        <ul class="timeline-description">
-                            <li>Developed and deployed 5+ scalable backend systems using FastAPI, REST APIs, and Dockerized microservices on Linux environments.</li>
-                            <li>Engineered 10+ automated data pipelines using Selenium, Playwright, and anti-bot strategies, processing 100K+ structured records from eCommerce and travel platforms.</li>
-                            <li>Designed and implemented ML-powered systems for semantic search, recommendations, and product comparison using FAISS and transformer embeddings.</li>
-                            <li>Built and integrated LangChain- and LangGraph-based chatbots with advanced memory, improving user engagement by 25% and reducing response latency by 60% via GPU optimization.</li>
-                            <li>Applied regex- and AI-based data normalization to process 50K+ unstructured product records, enhancing dataset quality for downstream ML models.</li>
-                            <li>Developed an AI-powered SDLC automation prototype using React.js, FastAPI, and OpenAI APIs, reducing manual engineering effort by 40%.</li>
-                            <li>Led end-to-end delivery of 3 core products — PriceEdge, Prism, and AI Chatbots, Bullsaye (Stock Market Product) — across backend, frontend, and cloud deployment (AWS/GCP).</li>
-                            <li>Implemented Apache Airflow-based automation pipelines executing every 15 minutes with 100% scalability for continuous data ingestion and population.</li>
-                            <li>Built a fully async Django backend API with 40+ endpoints for a stock market application, capable of handling 25K concurrent users on a single server with low memory usage.</li>
+
+                <!-- Kamikaze Solution -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="timeline-period">Nov 2025 — Present</span>
+                                <h3 class="timeline-role">Junior Cloud Development Engineer</h3>
+                                <h4 class="timeline-company"><span class="company-dot company-dot-green"></span>Kamikaze
+                                    Solution Pvt. Ltd. · Bengaluru</h4>
+                            </div>
+                            <span class="timeline-badge badge badge-emerald">Current</span>
+                        </div>
+                        <ul class="timeline-desc">
+                            <li>Designed and developed a high-availability video-streaming platform using Go, AWS, and
+                                Kubernetes supporting continuous streaming from ~100,000 IoT dashcam devices.</li>
+                            <li>Developed and managed 7 Go microservices with Kubernetes deployment, resource
+                                optimisation, health checks, circuit-breaker patterns, and KEDA autoscaling.</li>
+                            <li>Used AWS S3, VPC, EFS, Route 53, and CloudWatch for infrastructure; implemented secure
+                                service-to-service communication and Kubernetes Network Policies.</li>
+                            <li>Built a custom Keycloak Java provider for plugin-based IoT device authentication,
+                                replacing a managed authentication approach with a customisable in-house solution.</li>
+                            <li>Developed a multimodal manufacturing AI assistant with image and text embeddings,
+                                multi-agent retrieval workflows, MongoDB/PostgreSQL, and LangSmith evaluation —
+                                achieving ~90% answer relevance under LLM-as-a-Judge evaluation.</li>
                         </ul>
                         <div class="timeline-tags">
-                            <div class="timeline-tag">
-                                <i class="devicon-fastapi-original colored"></i>
-                                <span>FastAPI</span>
+                            <div class="timeline-tag"><i class="devicon-go-plain colored"></i><span>Go</span></div>
+                            <div class="timeline-tag"><i
+                                    class="devicon-kubernetes-plain colored"></i><span>Kubernetes</span></div>
+                            <div class="timeline-tag"><i
+                                    class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span></div>
+                            <div class="timeline-tag"><i class="devicon-python-plain colored"></i><span>Python</span>
                             </div>
-                            <div class="timeline-tag">
-                                <i class="devicon-python-plain colored"></i>
-                                <span>Python</span>
+                            <div class="timeline-tag"><i class="fas fa-robot"></i><span>Multi-Agent RAG</span></div>
+                            <div class="timeline-tag"><i class="devicon-java-plain colored"></i><span>Keycloak /
+                                    Java</span></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Buildnetic -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="timeline-period">May 2025 — Nov 2025</span>
+                                <h3 class="timeline-role">Software Developer</h3>
+                                <h4 class="timeline-company"><span
+                                        class="company-dot company-dot-indigo"></span>Buildnetic · India</h4>
                             </div>
-                            <div class="timeline-tag">
-                                <i class="devicon-docker-plain colored"></i>
-                                <span>Docker</span>
+                        </div>
+                        <ul class="timeline-desc">
+                            <li>Developed Python/FastAPI backend services and automated data pipelines to collect and
+                                process product and travel industry information at scale.</li>
+                            <li>Built image- and text-embedding-based product matching workflows, improving reported
+                                matching accuracy from ~60% to ~75% (+15 percentage points).</li>
+                            <li>Developed LLM chatbots and multi-agent information retrieval systems, connecting backend
+                                APIs and data pipelines to AI-powered application flows.</li>
+                            <li>Built a hotel price intelligence system that collected and analysed competitor pricing,
+                                events data, and market conditions.</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <div class="timeline-tag"><i class="devicon-python-plain colored"></i><span>Python</span>
                             </div>
-                            <div class="timeline-tag">
-                                <i class="devicon-selenium-original colored"></i>
-                                <span>Selenium</span>
+                            <div class="timeline-tag"><i
+                                    class="devicon-fastapi-original colored"></i><span>FastAPI</span></div>
+                            <div class="timeline-tag"><i class="fas fa-vector-square"></i><span>Embeddings</span></div>
+                            <div class="timeline-tag"><i class="fas fa-robot"></i><span>LangChain / LangGraph</span>
                             </div>
-                            <div class="timeline-tag">
-                                <i class="fas fa-robot"></i>
-                                <span>LangChain</span>
-                            </div>
-                            <div class="timeline-tag">
-                                <i class="devicon-amazonwebservices-plain-wordmark colored"></i>
-                                <span>AWS</span>
+                            <div class="timeline-tag"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="time-period">March 2024 - May 2025</div>
-                        <h3 class="timeline-title">Software Engineer - 1</h3>
-                        <h4 class="timeline-company">Nellsys Technologies PVT LTD</h4>
-                        <ul class="timeline-description">
-                            <li>Designed and implemented 40+ REST APIs following MVC architecture, improving performance by 25% and eliminating single-thread bottlenecks.</li>
-                            <li>Built 20+ reusable backend modules in Java (MVC, JPA) and PHP, aligned with evolving business needs.</li>
-                            <li>Managed 2+ CI/CD deployments using Git, GitHub, and automated pipelines, ensuring consistent releases.</li>
-                            <li>Led debugging and release operations, resolving 10+ critical configuration issues and improving delivery efficiency by 20%.</li>
-                            <li>Collaborated across 8+ Agile sprints for design reviews, implementation, and automated testing.</li>
-                            <li>Integrated Twilio WhatsApp and Razorpay APIs to automate campaigns and payments, increasing efficiency and reach.</li>
-                            <li>Built a backend system for sales operations, managing 1K+ client installment plans monthly with real-time communication and translation features.</li>
-                            <li>Practiced automated testing, coding best practices, and continuous integration to maintain code quality.</li>
+                <!-- Nellsys Technologies -->
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content glass-card">
+                        <div class="timeline-header">
+                            <div>
+                                <span class="timeline-period">Mar 2024 — May 2025</span>
+                                <h3 class="timeline-role">Software Engineer I</h3>
+                                <h4 class="timeline-company"><span class="company-dot company-dot-cyan"></span>Nellsys
+                                    Technologies Pvt. Ltd. · Hyderabad</h4>
+                            </div>
+                        </div>
+                        <ul class="timeline-desc">
+                            <li>Developed backend REST APIs and reusable modules using Java, JPA, PHP, and MVC
+                                architecture for business applications including a tourism and devotional booking
+                                platform.</li>
+                            <li>Integrated Twilio WhatsApp and Razorpay APIs to develop an admin portal that automated
+                                the sales team's manual communication and payment workflows.</li>
+                            <li>Participated in 8+ Agile sprints, code reviews, CI/CD pipeline management, and
+                                debugging/production release operations.</li>
                         </ul>
                         <div class="timeline-tags">
-                            <div class="timeline-tag">
-                                <i class="devicon-python-plain colored"></i>
-                                <span>Python</span>
+                            <div class="timeline-tag"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                            <div class="timeline-tag"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+                            <div class="timeline-tag"><i class="devicon-react-original colored"></i><span>React</span>
                             </div>
-                            <div class="timeline-tag">
-                                <i class="devicon-java-plain colored"></i>
-                                <span>Java</span>
-                            </div>
-                            <div class="timeline-tag">
-                                <i class="devicon-php-plain colored"></i>
-                                <span>PHP</span>
-                            </div>
-                            <div class="timeline-tag">
-                                <i class="fas fa-api"></i>
-                                <span>REST APIs</span>
-                            </div>
-                            <div class="timeline-tag">
-                                <i class="devicon-docker-plain colored"></i>
-                                <span>Docker</span>
-                            </div>
-                            <div class="timeline-tag">
-                                <i class="fas fa-credit-card"></i>
-                                <span>Payment Gateway</span>
-                            </div>
+                            <div class="timeline-tag"><i class="fas fa-credit-card"></i><span>Razorpay</span></div>
+                            <div class="timeline-tag"><i class="fab fa-whatsapp"></i><span>Twilio</span></div>
                         </div>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
+    <!-- ===== PROJECTS SECTION ===== -->
     <section id="projects" class="projects">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Projects</h2>
-                <p class="section-subtitle">My Recent Work</p>
+                <h2 class="section-title reveal">Projects</h2>
+                <p class="section-subtitle reveal">// built & shipped</p>
             </div>
 
-            <div class="project-filters">
+            <!-- Filter Buttons -->
+            <div class="project-filters reveal">
                 <button class="filter-btn active" data-filter="all">All</button>
-                <button class="filter-btn" data-filter="backend">Backend</button>
-                <button class="filter-btn" data-filter="api">API</button>
-                <button class="filter-btn" data-filter="fullstack">Full Stack</button>
+                <button class="filter-btn" data-filter="agentic">AI / Agentic</button>
+                <button class="filter-btn" data-filter="cloud">Cloud / K8s</button>
+                <button class="filter-btn" data-filter="edge">Edge AI</button>
+                <button class="filter-btn" data-filter="security">Security</button>
             </div>
 
             <div class="projects-grid">
-                <!-- Project 1 -->
-                <div class="project-card" data-category="backend api">
-                    <div class="project-img">
-                        <img src="https://cdn.pixabay.com/photo/2018/05/08/08/44/artificial-intelligence-3382507_1280.jpg" alt="Spring Boot API Project">
+
+                <!-- 1. Pilot Kubernetes -->
+                <div class="project-card reveal" data-category="cloud agentic">
+                    <div class="card-top">
+                        <span class="badge badge-indigo">Cloud / K8s</span>
                     </div>
-                    <div class="project-info">
-                        <div class="project-tag">Spring Boot API</div>
-                        <h3 class="project-title">Spring Boot API</h3>
-                        <p class="project-description">
-                            Architected scalable backend systems using Spring Boot, implementing Spring Core (DI, Bean Lifecycle) and AOP for modular and maintainable application design.
-                        </p>
-                        <div class="project-features">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>Redis caching and Hibernate ORM</li>
-                                <li>JWT-based authentication and RBAC</li>
-                                <li>Spring Actuator monitoring</li>
-                                <li>Automated deployment with PowerShell</li>
-                            </ul>
-                        </div>
-                        <div class="project-technologies">
-                            <div class="tech-item">
-                                <i class="devicon-java-plain colored"></i>
-                                <span>Java</span>
-                            </div>
-                            <div class="tech-item">
-                                <i class="devicon-spring-plain colored"></i>
-                                <span>Spring Boot</span>
-                            </div>
-                            <div class="tech-item">
-                                <i class="devicon-redis-plain colored"></i>
-                                <span>Redis</span>
-                            </div>
-                            <div class="tech-item">
-                                <i class="fas fa-database"></i>
-                                <span>Hibernate</span>
-                            </div>
-                            <div class="tech-item">
-                                <i class="fas fa-key"></i>
-                                <span>JWT</span>
-                            </div>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link" target="_blank"><i class="fas fa-globe"></i></a>
-                            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
+                    <h3 class="project-title">Pilot Kubernetes</h3>
+                    <p class="project-desc">
+                        AI-native Kubernetes operations platform that models cluster resources, dependencies, and
+                        relationships as a connected graph. An AI SRE agent uses graph context to investigate incidents,
+                        trace dependencies, analyse blast radius, and recommend remediation.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Go</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">FalkorDB</span>
+                        <span class="tech-tag">Graph Queries</span>
+                        <span class="tech-tag">Google Cloud</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Niteesh57/Pilot-Kubernetes" target="_blank"
+                            class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="project-card" data-category="backend api">
-                    <div class="project-img">
-                        <img src="https://cdn.pixabay.com/photo/2016/11/19/14/00/code-1839406_1280.jpg" alt="Node.js Web Application">
+                <!-- 2. Autonomous Nova -->
+                <div class="project-card reveal" data-category="agentic">
+                    <div class="card-top">
+                        <span class="badge badge-violet">AI / Agentic</span>
+                        <span class="hackathon-badge"><i class="fas fa-trophy"></i> Hackathon</span>
                     </div>
-                    <div class="project-info">
-                        <div class="project-tag">Node.js MVC Application</div>
-                        <h3 class="project-title">Node.js Web Application</h3>
-                        <p class="project-description">
-                            Designed a modular and scalable backend using Node.js MVC architecture, ensuring structured separation of concerns and attention to detail.
-                        </p>
-                        <div class="project-features">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>GraphQL & REST APIs</li>
-                                <li>Docker containerization</li>
-                                <li>Multithreading with worker threads</li>
-                                <li>Optimized database architecture</li>
-                            </ul>
-                        </div>
-                        <div class="project-technologies">
-                            <div class="tech-item">
-                                <i class="devicon-nodejs-plain colored"></i>
-                                <span>Node.js</span>
-                            </div>
-                            <div class="tech-item">
-                                <i class="devicon-typescript-plain colored"></i>
-                                <span>TypeScript</span>
-                            </div>
-                            <div class="tech-item">
-                                <i class="devicon-graphql-plain colored"></i>
-                                <span>GraphQL</span>
-                            </div>
-                            <div class="tech-item">
-                                <i class="devicon-docker-plain colored"></i>
-                                <span>Docker</span>
-                            </div>
-                            <div class="tech-item">
-                                <i class="fas fa-sitemap"></i>
-                                <span>MVC</span>
-                            </div>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link" target="_blank"><i class="fas fa-globe"></i></a>
-                            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
+                    <h3 class="project-title">Autonomous Nova</h3>
+                    <p class="project-desc">
+                        Enterprise AI platform combining video-based security analysis, multimodal voice assistance
+                        (Amazon Nova 2 Sonic), autonomous browser-based market intelligence, and AI-driven DevOps
+                        workflows — with human approval for sensitive actions. Built for the Amazon Nova AI Hackathon.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">AWS Bedrock</span>
+                        <span class="tech-tag">Amazon Nova</span>
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">WebSockets</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Niteesh57/Nova_ERP_AEI_BACKEND" target="_blank"
+                            class="project-link-btn">
+                            <i class="fab fa-github"></i> Backend
+                        </a>
+                        <a href="https://builder.aws.com/content/3Ar4KEPWDqzk5LJjEdOq09rTxAO/autonomous-nova-how-we-built-an-ai-operations-layer-for-startups-using-amazon-nova"
+                            target="_blank" class="project-link-btn">
+                            <i class="fas fa-file-alt"></i> Article
+                        </a>
                     </div>
                 </div>
 
-                <!-- Project 3 -->
-                <div class="project-card" data-category="api">
-                    <div class="project-img">
-                        <img src="https://cdn.pixabay.com/photo/2018/05/04/20/01/website-3374825_1280.jpg" alt="Social Context API">
+                <!-- 3. Cup Work -->
+                <div class="project-card reveal" data-category="agentic">
+                    <div class="card-top">
+                        <span class="badge badge-violet">AI / Agentic</span>
+                        <span class="hackathon-badge"><i class="fas fa-trophy"></i> Hackathon</span>
                     </div>
-                    <div class="project-info">
-                        <div class="project-tag">FastAPI Backend</div>
-                        <h3 class="project-title">Social Context API</h3>
-                        <p class="project-description">
-                            Developed a secure and scalable API using FastAPI, implementing JWT authentication and RBAC to restrict access to endpoints based on user roles.
-                        </p>
-                        <div class="project-features">
-                            <h4>Key Features:</h4>
-                            <ul>
-                                <li>Role-based access control</li>
-                                <li>Swagger UI documentation</li>
-                                <li>Token-based authorization</li>
-                                <li>Database indexing for performance</li>
-                            </ul>
-                        </div>
-                        <div class="project-technologies">
-                            <div class="tech-item">
-                                <i class="devicon-fastapi-original colored"></i>
-                                <span>FastAPI</span>
-                            </div>
-                            <div class="tech-item">
-                                <i class="fas fa-key"></i>
-                                <span>JWT</span>
-                            </div>
-                            <div class="tech-item">
-                                <i class="devicon-postgresql-plain colored"></i>
-                                <span>PostgreSQL</span>
-                            </div>
-                            <div class="tech-item">
-                                <i class="devicon-swagger-plain colored"></i>
-                                <span>Swagger</span>
-                            </div>
-                            <div class="tech-item">
-                                <i class="fas fa-shield-alt"></i>
-                                <span>RBAC</span>
-                            </div>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link" target="_blank"><i class="fas fa-globe"></i></a>
-                            <a href="#" class="project-link" target="_blank"><i class="fab fa-github"></i></a>
-                        </div>
+                    <h3 class="project-title">Cup Work</h3>
+                    <p class="project-desc">
+                        Autonomous desktop AI agent that uses screen perception, keyboard/mouse control, and multi-agent
+                        orchestration to execute and verify multi-step tasks across desktop applications — with
+                        human-in-the-loop approval for sensitive actions. Deployed on Google Cloud Run.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Gemini 3.7</span>
+                        <span class="tech-tag">Google ADK</span>
+                        <span class="tech-tag">Electron</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Google Cloud Run</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Niteesh57/Cup_Work" target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://cup-work-git-619077244859.us-central1.run.app" target="_blank"
+                            class="project-link-btn">
+                            <i class="fas fa-globe"></i> Live Demo
+                        </a>
+                        <a href="https://youtu.be/Qo0pyuk2Whs" target="_blank" class="project-link-btn">
+                            <i class="fab fa-youtube"></i> Video
+                        </a>
                     </div>
                 </div>
+
+                <!-- 4. KnowledgeForge -->
+                <div class="project-card reveal" data-category="agentic">
+                    <div class="card-top">
+                        <span class="badge badge-violet">AI / Agentic</span>
+                        <span class="hackathon-badge"><i class="fas fa-trophy"></i> Hackathon</span>
+                    </div>
+                    <h3 class="project-title">KnowledgeForge</h3>
+                    <p class="project-desc">
+                        Multi-agent interactive learning platform that transforms educational prompts into interactive
+                        games, CLI sandboxes, algorithm visualisers, comics, and simulations. Uses LangGraph for
+                        stateful orchestration and Azure AI Search to retrieve structured visual assets. Microsoft
+                        Agents League submission.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">LangGraph</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">Azure AI Search</span>
+                        <span class="tech-tag">Groq</span>
+                        <span class="tech-tag">React</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Niteesh57/knowledgeforge" target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                        <a href="https://knowledgeforge-production-064c.up.railway.app" target="_blank"
+                            class="project-link-btn">
+                            <i class="fas fa-globe"></i> Live Demo
+                        </a>
+                        <a href="https://www.youtube.com/watch?v=8YPDC3mczpY" target="_blank" class="project-link-btn">
+                            <i class="fab fa-youtube"></i> Video
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 5. CrowdShield AI -->
+                <div class="project-card reveal" data-category="security">
+                    <div class="card-top">
+                        <span class="badge badge-cyan">Security</span>
+                    </div>
+                    <h3 class="project-title">CrowdShield AI</h3>
+                    <p class="project-desc">
+                        AI-assisted endpoint security monitoring pipeline combining Sysmon telemetry, Splunk, Kafka,
+                        PID-correlation event buffering, deterministic detection rules, and LLM-based threat
+                        investigation. Critical rule matches bypass LLM analysis to reduce detection latency.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Splunk</span>
+                        <span class="tech-tag">Apache Kafka</span>
+                        <span class="tech-tag">Sysmon</span>
+                        <span class="tech-tag">Groq LLM</span>
+                        <span class="tech-tag">Docker</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Niteesh57/crowdshield-ai" target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 6. SiliconGraph -->
+                <div class="project-card reveal" data-category="edge">
+                    <div class="card-top">
+                        <span class="badge badge-amber">Edge AI</span>
+                    </div>
+                    <h3 class="project-title">SiliconGraph</h3>
+                    <p class="project-desc">
+                        Hardware-aware AI compiler that packages open-source models (Llama, Gemma, Qwen, Phi) into
+                        optimised execution graphs for ARM devices, with graph selection based on hardware profile,
+                        memory budget, quantisation precision (FP16/INT8/INT4), and runtime conditions.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">C++</span>
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">LLVM</span>
+                        <span class="tech-tag">MLIR</span>
+                        <span class="tech-tag">ARM</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Niteesh57/SiliconGraph" target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 7. GoFarmer -->
+                <div class="project-card reveal" data-category="edge">
+                    <div class="card-top">
+                        <span class="badge badge-amber">Edge AI</span>
+                    </div>
+                    <h3 class="project-title">GoFarmer</h3>
+                    <p class="project-desc">
+                        Offline-first agricultural AI assistant for Android that combines on-device Gemma 4 inference
+                        via the Cactus engine, voice interaction, image-based crop disease identification, RAG, and tool
+                        calling — with hardware-aware memory triage to support low-RAM devices.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Gemma 4</span>
+                        <span class="tech-tag">Cactus Engine</span>
+                        <span class="tech-tag">RAG</span>
+                        <span class="tech-tag">Android</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/Niteesh57/GoFarmer" target="_blank" class="project-link-btn">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 8. Zeppy -->
+                <div class="project-card reveal" data-category="agentic">
+                    <div class="card-top">
+                        <span class="badge badge-violet">AI / Agentic</span>
+                        <span class="hackathon-badge hackathon-badge-gold"><i class="fas fa-medal"></i> 2nd Prize</span>
+                    </div>
+                    <h3 class="project-title">Zeppy</h3>
+                    <p class="project-desc">
+                        Multilingual AI voice-calling agent using real-time Gemini capabilities, LiveKit WebRTC, and
+                        Twilio for voice infrastructure. Awarded 2nd Prize at the Gemini 3 Bengaluru Hackathon organised
+                        by Google DeepMind × Cerebral Valley.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Gemini Live</span>
+                        <span class="tech-tag">LiveKit WebRTC</span>
+                        <span class="tech-tag">Twilio</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://lnkd.in/p/dbkyQMm7" target="_blank" class="project-link-btn">
+                            <i class="fas fa-trophy"></i> Recognition
+                        </a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
+    <!-- ===== AWARDS & HACKATHONS SECTION ===== -->
+    <section id="awards" class="awards">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal">Awards & Hackathons</h2>
+                <p class="section-subtitle reveal">// recognition & competitions</p>
+            </div>
+
+            <div class="awards-grid">
+
+                <div class="award-card glass-card reveal">
+                    <div class="award-icon award-icon-gold">
+                        <i class="fas fa-medal"></i>
+                    </div>
+                    <span class="badge badge-amber award-rank">2nd Prize</span>
+                    <h3 class="award-title">Gemini 3 Bengaluru Hackathon</h3>
+                    <p class="award-project">Zeppy — Multilingual AI Voice Agent</p>
+                    <p class="award-event">Google DeepMind × Cerebral Valley</p>
+                    <span class="award-year">2026</span>
+                </div>
+
+                <div class="award-card glass-card reveal">
+                    <div class="award-icon award-icon-indigo">
+                        <i class="fab fa-aws"></i>
+                    </div>
+                    <span class="badge badge-indigo award-rank">Hackathon Entry</span>
+                    <h3 class="award-title">Amazon Nova AI Hackathon</h3>
+                    <p class="award-project">Autonomous Nova — Enterprise AI Platform</p>
+                    <p class="award-event">AWS Builder · Published Technical Article</p>
+                    <span class="award-year">2026</span>
+                    <a href="https://builder.aws.com/content/3Ar4KEPWDqzk5LJjEdOq09rTxAO/autonomous-nova-how-we-built-an-ai-operations-layer-for-startups-using-amazon-nova"
+                        target="_blank" class="award-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="award-card glass-card reveal">
+                    <div class="award-icon award-icon-violet">
+                        <i class="fab fa-microsoft"></i>
+                    </div>
+                    <span class="badge badge-violet award-rank">Hackathon Entry</span>
+                    <h3 class="award-title">Microsoft Agents League</h3>
+                    <p class="award-project">KnowledgeForge — Interactive AI Learning</p>
+                    <p class="award-event">Creative Apps Track</p>
+                    <span class="award-year">2026</span>
+                </div>
+
+                <div class="award-card glass-card reveal">
+                    <div class="award-icon award-icon-cyan">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <span class="badge badge-cyan award-rank">Hackathon Entry</span>
+                    <h3 class="award-title">AllThingsAgentic Hackathon</h3>
+                    <p class="award-project">Cup Work — Autonomous Desktop Agent</p>
+                    <p class="award-event">Devpost Submission</p>
+                    <span class="award-year">2026</span>
+                    <a href="https://devpost.com/software/hey-jave" target="_blank" class="award-link">View Submission
+                        <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title reveal">Skills</h2>
+                <p class="section-subtitle reveal">// technical capabilities</p>
+            </div>
+
+            <div class="skill-tabs reveal">
+                <div class="skill-tab active" data-tab="languages">Languages</div>
+                <div class="skill-tab" data-tab="backend">Backend</div>
+                <div class="skill-tab" data-tab="ai">AI / Agents</div>
+                <div class="skill-tab" data-tab="cloud">Cloud & DevOps</div>
+                <div class="skill-tab" data-tab="databases">Databases</div>
+                <div class="skill-tab" data-tab="security">Security</div>
+            </div>
+
+            <!-- Languages -->
+            <div class="skill-content active" id="languages">
+                <div class="skill-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
+                <div class="skill-item"><i class="devicon-go-plain colored"></i><span>Go</span></div>
+                <div class="skill-item"><i class="devicon-java-plain colored"></i><span>Java</span></div>
+                <div class="skill-item"><i class="devicon-php-plain colored"></i><span>PHP</span></div>
+                <div class="skill-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                <div class="skill-item"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+                <div class="skill-item"><i class="devicon-cplusplus-plain colored"></i><span>C++</span></div>
+            </div>
+
+            <!-- Backend -->
+            <div class="skill-content" id="backend">
+                <div class="skill-item"><i class="devicon-fastapi-original colored"></i><span>FastAPI</span></div>
+                <div class="skill-item"><i class="devicon-spring-plain colored"></i><span>Spring Boot</span></div>
+                <div class="skill-item"><i class="devicon-django-plain colored"></i><span>Django</span></div>
+                <div class="skill-item"><i class="devicon-laravel-plain colored"></i><span>Laravel</span></div>
+                <div class="skill-item"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+                <div class="skill-item"><i class="devicon-react-original colored"></i><span>React</span></div>
+                <div class="skill-item"><i class="fas fa-plug"></i><span>REST / WebSocket</span></div>
+                <div class="skill-item"><i class="fas fa-cubes"></i><span>Microservices</span></div>
+            </div>
+
+            <!-- AI / Agents -->
+            <div class="skill-content" id="ai">
+                <div class="skill-item"><i class="fas fa-robot"></i><span>LangChain</span></div>
+                <div class="skill-item"><i class="fas fa-project-diagram"></i><span>LangGraph</span></div>
+                <div class="skill-item"><i class="fas fa-search"></i><span>RAG / Multimodal RAG</span></div>
+                <div class="skill-item"><i class="fas fa-sitemap"></i><span>Multi-Agent Systems</span></div>
+                <div class="skill-item"><i class="fas fa-vector-square"></i><span>Text / Image Embeddings</span></div>
+                <div class="skill-item"><i class="fas fa-chart-bar"></i><span>LLM Evaluation</span></div>
+                <div class="skill-item"><i class="fas fa-flask"></i><span>LangSmith</span></div>
+                <div class="skill-item"><i class="fas fa-brain"></i><span>Google ADK</span></div>
+                <div class="skill-item"><i class="fas fa-cloud"></i><span>AWS Bedrock</span></div>
+                <div class="skill-item"><i class="fas fa-desktop"></i><span>Computer Use Agents</span></div>
+            </div>
+
+            <!-- Cloud & DevOps -->
+            <div class="skill-content" id="cloud">
+                <div class="skill-item"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span>
+                </div>
+                <div class="skill-item"><i class="devicon-googlecloud-plain colored"></i><span>Google Cloud</span></div>
+                <div class="skill-item"><i class="devicon-azure-plain colored"></i><span>Azure</span></div>
+                <div class="skill-item"><i class="devicon-kubernetes-plain colored"></i><span>Kubernetes</span></div>
+                <div class="skill-item"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+                <div class="skill-item"><i class="devicon-helm-original colored"></i><span>Helm</span></div>
+                <div class="skill-item"><i class="fas fa-bolt"></i><span>KEDA</span></div>
+                <div class="skill-item"><i class="fas fa-infinity"></i><span>CI/CD</span></div>
+                <div class="skill-item"><i class="devicon-linux-plain colored"></i><span>Linux</span></div>
+                <div class="skill-item"><i class="devicon-prometheus-original colored"></i><span>Prometheus</span></div>
+            </div>
+
+            <!-- Databases -->
+            <div class="skill-content" id="databases">
+                <div class="skill-item"><i class="devicon-postgresql-plain colored"></i><span>PostgreSQL</span></div>
+                <div class="skill-item"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+                <div class="skill-item"><i class="devicon-redis-plain colored"></i><span>Redis</span></div>
+                <div class="skill-item"><i class="fas fa-database"></i><span>ChromaDB</span></div>
+                <div class="skill-item"><i class="fas fa-project-diagram"></i><span>FalkorDB</span></div>
+                <div class="skill-item"><i class="fas fa-search"></i><span>Azure AI Search</span></div>
+                <div class="skill-item"><i class="fas fa-stream"></i><span>Apache Kafka</span></div>
+                <div class="skill-item"><i class="fas fa-layer-group"></i><span>Vector Search</span></div>
+            </div>
+
+            <!-- Security -->
+            <div class="skill-content" id="security">
+                <div class="skill-item"><i class="fas fa-key"></i><span>Keycloak</span></div>
+                <div class="skill-item"><i class="fas fa-lock"></i><span>OAuth2 / JWT</span></div>
+                <div class="skill-item"><i class="fas fa-certificate"></i><span>mTLS</span></div>
+                <div class="skill-item"><i class="fas fa-network-wired"></i><span>Service Mesh</span></div>
+                <div class="skill-item"><i class="fas fa-shield-alt"></i><span>K8s Network Policies</span></div>
+                <div class="skill-item"><i class="fas fa-eye"></i><span>Sysmon / Splunk</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION SECTION ===== -->
     <section id="education" class="education">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Education & Certifications</h2>
-                <p class="section-subtitle">Academic Background</p>
+                <h2 class="section-title reveal">Education & Certifications</h2>
+                <p class="section-subtitle reveal">// academic background</p>
             </div>
 
             <div class="education-grid">
-                <div class="education-card">
-                    <div class="education-header">
-                        <div class="education-icon">
-                            <i class="fas fa-graduation-cap"></i>
-                        </div>
-                        <div class="education-title">
-                            <h3>Bachelor of Engineering (B.E)</h3>
-                            <p>Computer Science and Engineering</p>
-                        </div>
+                <!-- Education card -->
+                <div class="education-card glass-card reveal">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
-                    <div class="education-body">
-                        <div class="education-details">
-                            <p class="education-institution">Saveetha School of Engineering</p>
-                            <p class="education-location">Chennai, Tamil Nadu</p>
-                            <p class="education-years">August 2019 - June 2023</p>
-                            <p class="education-gpa">GPA: 8.4</p>
-                        </div>
-                        <div class="education-achievements">
-                            <h4>Achievements:</h4>
-                            <ul>
-                                <li>Strong skills in backend debugging, data structures, and software lifecycle.</li>
-                                <li>Awarded for top project in NLP-based sentiment analysis.</li>
-                            </ul>
+                    <div class="edu-body">
+                        <span class="badge badge-indigo">B.E.</span>
+                        <h3 class="edu-degree">Bachelor of Engineering</h3>
+                        <p class="edu-field">Computer Science and Engineering</p>
+                        <p class="edu-institution">Saveetha School of Engineering</p>
+                        <p class="edu-meta">Chennai, Tamil Nadu &nbsp;·&nbsp; 2019 – 2023 &nbsp;·&nbsp; GPA 8.4</p>
+                        <div class="edu-achievements">
+                            <p><i class="fas fa-award" style="color:var(--accent-amber)"></i> Awarded for top project in
+                                NLP-based sentiment analysis</p>
                         </div>
                     </div>
                 </div>
 
-                <div class="certifications">
-                    <h3 class="certifications-title">Professional Certifications</h3>
-
-                    <div class="certification-cards">
-                        <div class="certification-card">
-                            <div class="certification-icon">
+                <!-- Certifications -->
+                <div class="certifications reveal">
+                    <h3 class="certs-title">Professional Certifications</h3>
+                    <div class="cert-cards">
+                        <div class="cert-card glass-card">
+                            <div class="cert-icon cert-icon-blue">
                                 <i class="fab fa-microsoft"></i>
                             </div>
-                            <div class="certification-info">
+                            <div class="cert-info">
                                 <h4>AZ-305: Azure Solutions Architect Expert</h4>
-                                <p>Microsoft • September 2025</p>
-                                <p class="cert-credential">Credential ID: 3BC2CU-B5EC3A</p>
+                                <p>Microsoft &nbsp;·&nbsp; September 2025</p>
+                                <p class="cert-id">ID: 3BC2CU-B5EC3A</p>
                             </div>
                         </div>
-
-                        <div class="certification-card">
-                            <div class="certification-icon">
+                        <div class="cert-card glass-card">
+                            <div class="cert-icon cert-icon-blue">
                                 <i class="fab fa-microsoft"></i>
                             </div>
-                            <div class="certification-info">
+                            <div class="cert-info">
                                 <h4>AZ-104: Azure Administrator Associate</h4>
-                                <p>Microsoft • September 2025</p>
-                                <p class="cert-credential">Credential ID: 01E9AF-4CC0B0</p>
+                                <p>Microsoft &nbsp;·&nbsp; September 2025</p>
+                                <p class="cert-id">ID: 01E9AF-4CC0B0</p>
                             </div>
                         </div>
-
-                        <div class="certification-card">
-                            <div class="certification-icon">
+                        <div class="cert-card glass-card">
+                            <div class="cert-icon cert-icon-orange">
                                 <i class="fas fa-cloud"></i>
                             </div>
-                            <div class="certification-info">
-                                <h4>Oracle Cloud Infrastructure 2025 Certified Generative AI Professional</h4>
-                                <p>Oracle (OCI) • October 2025</p>
+                            <div class="cert-info">
+                                <h4>OCI Generative AI Professional</h4>
+                                <p>Oracle Cloud Infrastructure &nbsp;·&nbsp; October 2025</p>
                             </div>
                         </div>
                     </div>
@@ -740,81 +844,71 @@ I’m passionate about combining backend engineering and AI innovation to build 
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- ===== CONTACT SECTION ===== -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
-                <h2 class="section-title">Contact Me</h2>
-                <p class="section-subtitle">Get In Touch</p>
+                <h2 class="section-title reveal">Contact</h2>
+                <p class="section-subtitle reveal">// get in touch</p>
             </div>
 
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-card-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div class="contact-card-content">
-                            <h3>Location</h3>
-                            <p>Bengaluru, India</p>
-                        </div>
-                    </div>
+            <div class="contact-intro reveal">
+                <p>Currently open to AI Engineer, Backend Engineer, and Cloud-Native / Platform Engineer roles. Feel
+                    free to reach out.</p>
+            </div>
 
-                    <div class="contact-card">
-                        <div class="contact-card-icon">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div class="contact-card-content">
-                            <h3>Email</h3>
-                            <p><a href="mailto:nagireddybv5@gmail.com">nagireddybv5@gmail.com</a></p>
-                        </div>
+            <div class="contact-cards reveal">
+                <div class="contact-card glass-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-map-marker-alt"></i>
                     </div>
-
-                    <div class="contact-card">
-                        <div class="contact-card-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div class="contact-card-content">
-                            <h3>Phone</h3>
-                            <p><a href="tel:+916304302914">+91 6304302914</a></p>
-                        </div>
-                    </div>
-
-                    <div class="contact-socials">
-                        <a href="https://www.linkedin.com/in/b-v-nagi-reddy-741612203/" target="_blank" class="contact-social-link">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/Niteesh57" target="_blank" class="contact-social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:nagireddybv5@gmail.com" class="contact-social-link">
-                            <i class="far fa-envelope"></i>
-                        </a>
-                    </div>
+                    <h3>Location</h3>
+                    <p>Bengaluru, India</p>
                 </div>
+                <div class="contact-card glass-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:nagireddybv5@gmail.com">nagireddybv5@gmail.com</a></p>
+                </div>
+                <div class="contact-card glass-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/b-v-nagi-reddy-741612203/"
+                            target="_blank">b-v-nagi-reddy</a></p>
+                </div>
+                <div class="contact-card glass-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/Niteesh57" target="_blank">Niteesh57</a></p>
+                </div>
+            </div>
 
-                <!-- <div class="contact-form-container">
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <input type="text" id="name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div> -->
+            <div class="contact-social-row reveal">
+                <a href="https://www.linkedin.com/in/b-v-nagi-reddy-741612203/" target="_blank"
+                    class="contact-social-link">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/Niteesh57" target="_blank" class="contact-social-link">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href="mailto:nagireddybv5@gmail.com" class="contact-social-link">
+                    <i class="far fa-envelope"></i>
+                </a>
+                <a href="https://www.youtube.com/channel/UC2TeREKWZaMajhcaQkg6eZA" target="_blank"
+                    class="contact-social-link">
+                    <i class="fab fa-youtube"></i>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ===== FOOTER ===== -->
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -824,31 +918,31 @@ I’m passionate about combining backend engineering and AI innovation to build 
                         <span class="logo-dot"></span>
                     </a>
                 </div>
-                <p class="footer-text">Building elegant software solutions with code and passion.</p>
+                <p class="footer-text">Building AI-powered products and the infrastructure that makes them work.</p>
                 <div class="footer-socials">
-                    <a href="https://linkedin.com/in/" target="_blank" class="footer-social-link">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a href="https://github.com/" target="_blank" class="footer-social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="mailto:nagireddybv5@gmail.com" class="footer-social-link">
-                        <i class="far fa-envelope"></i>
-                    </a>
+                    <a href="https://www.linkedin.com/in/b-v-nagi-reddy-741612203/" target="_blank"
+                        class="footer-social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/Niteesh57" target="_blank" class="footer-social-link"><i
+                            class="fab fa-github"></i></a>
+                    <a href="mailto:nagireddybv5@gmail.com" class="footer-social-link"><i
+                            class="far fa-envelope"></i></a>
+                    <a href="https://www.youtube.com/channel/UC2TeREKWZaMajhcaQkg6eZA" target="_blank"
+                        class="footer-social-link"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2024 B V Nagi Reddy. All Rights Reserved.</p>
+                <p>&copy; <span id="footer-year"></span> Nagi Reddy B V · All Rights Reserved.</p>
             </div>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#home" class="back-to-top">
+    <!-- Back to Top -->
+    <a href="#home" class="back-to-top" id="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </a>
 
     <!-- Scripts -->
     <script src="js/main.js"></script>
 </body>
+
 </html>

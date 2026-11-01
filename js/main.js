@@ -1,364 +1,299 @@
-// ----- SCROLL ANIMATIONS -----
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: '0px 0px -50px 0px'
-};
+/**
+ * main.js — Modern Minimalist Portfolio
+ * Lightweight, fast, vanilla JS.
+ */
 
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0)';
-        }
-    });
-}, observerOptions);
-
-// Observe skill items and other animated elements
-document.addEventListener('DOMContentLoaded', () => {
-    const animatedElements = document.querySelectorAll('.skill-item, .tech-item, .timeline-item, .project-card');
-    animatedElements.forEach(el => {
-        observer.observe(el);
-    });
-});
-
-// ----- DEVICON FALLBACK -----
-document.addEventListener('DOMContentLoaded', () => {
-    // Map of technologies to their correct Devicon classes
-    const deviconMap = {
-        'express': 'devicon-express-original',
-        'swagger': 'devicon-swagger-plain',
-        'vuejs': 'devicon-vuejs-plain',
-        'tensorflow': 'devicon-tensorflow-original',
-        'pytorch': 'devicon-pytorch-original'
-    };
-
-    // Check for missing or incorrect Devicon classes
-    const techIcons = document.querySelectorAll('[class*="devicon-"]');
-    techIcons.forEach(icon => {
-        const classes = icon.className;
-        // Add fallback for missing icons
-        icon.addEventListener('error', () => {
-            // If icon fails to load, add a backup style
-            icon.style.fontSize = '2rem';
-            icon.style.color = '#4f46e5';
-        });
-    });
-});
-
-// ----- PRELOADER -----
+/* ============================================================
+   1. PRELOADER
+   ============================================================ */
 window.addEventListener('load', () => {
-    const preloader = document.querySelector('.preloader');
+  const preloader = document.querySelector('.preloader');
+  if (preloader) {
     setTimeout(() => {
-        preloader.classList.add('hide');
-    }, 1000);
+      preloader.classList.add('hide');
+    }, 250);
+  }
 });
 
-// ----- CUSTOM CURSOR -----
+/* ============================================================
+   DOMContentLoaded wrapper
+   ============================================================ */
 document.addEventListener('DOMContentLoaded', () => {
-    const cursor = document.querySelector('.cursor');
-    const cursorFollower = document.querySelector('.cursor-follower');
 
-    document.addEventListener('mousemove', (e) => {
-        cursor.style.left = e.clientX + 'px';
-        cursor.style.top = e.clientY + 'px';
+  /* ----------------------------------------------------------
+     2. STICKY HEADER
+     ---------------------------------------------------------- */
+  const header = document.querySelector('.header');
 
-        // Add a small delay for smooth following effect
-        setTimeout(() => {
-            cursorFollower.style.left = e.clientX + 'px';
-            cursorFollower.style.top = e.clientY + 'px';
-        }, 50);
-    });
-
-    // Add effects on hoverable elements
-    const hoverElements = document.querySelectorAll('a, button, .skill-tab, .project-card, .filter-btn, .social-link, .contact-card, .certification-card');
-
-    hoverElements.forEach(element => {
-        element.addEventListener('mouseenter', () => {
-            cursor.style.width = '0px';
-            cursor.style.height = '0px';
-            cursorFollower.style.width = '50px';
-            cursorFollower.style.height = '50px';
-            cursorFollower.style.borderColor = 'var(--primary-color)';
-            cursorFollower.style.backgroundColor = 'rgba(126, 87, 194, 0.1)';
-        });
-
-        element.addEventListener('mouseleave', () => {
-            cursor.style.width = '12px';
-            cursor.style.height = '12px';
-            cursorFollower.style.width = '40px';
-            cursorFollower.style.height = '40px';
-            cursorFollower.style.borderColor = 'var(--primary-color)';
-            cursorFollower.style.backgroundColor = 'transparent';
-        });
-    });
-});
-
-// ----- STICKY HEADER -----
-window.addEventListener('scroll', () => {
-    const header = document.querySelector('.header');
-    if (window.scrollY > 50) {
-        header.classList.add('scrolled');
+  function handleHeaderScroll() {
+    if (!header) return;
+    if (window.scrollY > 20) {
+      header.classList.add('scrolled');
     } else {
-        header.classList.remove('scrolled');
+      header.classList.remove('scrolled');
     }
-});
+  }
 
-// ----- MOBILE MENU TOGGLE -----
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-menu');
+  window.addEventListener('scroll', handleHeaderScroll, { passive: true });
+  handleHeaderScroll();
 
+  /* ----------------------------------------------------------
+     3. MOBILE MENU TOGGLE
+     ---------------------------------------------------------- */
+  const hamburger = document.querySelector('.hamburger');
+  const navMenu   = document.querySelector('.nav-menu');
+
+  if (hamburger && navMenu) {
     hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('open');
-        navMenu.classList.toggle('active');
+      hamburger.classList.toggle('open');
+      navMenu.classList.toggle('active');
     });
 
-    // Close mobile menu when a nav link is clicked
-    const navLinks = document.querySelectorAll('.nav-link');
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('open');
-            navMenu.classList.remove('active');
-        });
+    navMenu.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        hamburger.classList.remove('open');
+        navMenu.classList.remove('active');
+      });
     });
-});
+  }
 
-// ----- ACTIVE NAV LINK ON SCROLL -----
-window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
+  /* ----------------------------------------------------------
+     4. ACTIVE NAV LINK ON SCROLL
+     ---------------------------------------------------------- */
+  const sections = document.querySelectorAll('section[id]');
+  const navLinks = document.querySelectorAll('.nav-menu a[href^="#"]');
 
-    let current = '';
-
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-
-        if (scrollY >= (sectionTop - 200)) {
-            current = section.getAttribute('id');
+  if (sections.length && navLinks.length) {
+    const sectionObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const id = entry.target.getAttribute('id');
+          navLinks.forEach(link => {
+            link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+          });
         }
-    });
+      });
+    }, { threshold: 0.35 });
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
-            link.classList.add('active');
+    sections.forEach(section => sectionObserver.observe(section));
+  }
+
+  /* ----------------------------------------------------------
+     5. TYPEWRITER EFFECT
+     ---------------------------------------------------------- */
+  const typewriterEl = document.querySelector('.typewriter-text');
+
+  if (typewriterEl) {
+    const roles = [
+      'AI Engineer',
+      'Agentic Systems Builder',
+      'Cloud-Native Developer',
+      'Backend Engineer',
+    ];
+
+    let roleIndex  = 0;
+    let charIndex  = 0;
+    let isDeleting = false;
+
+    function type() {
+      const currentRole = roles[roleIndex];
+
+      if (isDeleting) {
+        typewriterEl.textContent = currentRole.substring(0, charIndex - 1);
+        charIndex--;
+      } else {
+        typewriterEl.textContent = currentRole.substring(0, charIndex + 1);
+        charIndex++;
+      }
+
+      let delay = isDeleting ? 30 : 65;
+
+      if (!isDeleting && charIndex === currentRole.length) {
+        delay      = 2000;
+        isDeleting = true;
+      } else if (isDeleting && charIndex === 0) {
+        isDeleting = false;
+        roleIndex  = (roleIndex + 1) % roles.length;
+        delay      = 350;
+      }
+
+      setTimeout(type, delay);
+    }
+
+    type();
+  }
+
+  /* ----------------------------------------------------------
+     6. SCROLL REVEAL
+     ---------------------------------------------------------- */
+  const revealEls = document.querySelectorAll('.reveal');
+
+  if (revealEls.length) {
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
         }
-    });
-});
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 
-// ----- SKILL TABS -----
-document.addEventListener('DOMContentLoaded', () => {
-    const skillTabs = document.querySelectorAll('.skill-tab');
+    revealEls.forEach(el => revealObserver.observe(el));
+  }
 
-    skillTabs.forEach(tab => {
-        tab.addEventListener('click', () => {
-            // Remove active class from all tabs
-            skillTabs.forEach(t => t.classList.remove('active'));
+  /* ----------------------------------------------------------
+     7. STATS COUNTER ANIMATION
+     ---------------------------------------------------------- */
+  const counterEls = document.querySelectorAll('.counter');
 
-            // Add active class to clicked tab
-            tab.classList.add('active');
+  if (counterEls.length) {
+    function easeOut(t) {
+      return 1 - Math.pow(1 - t, 3);
+    }
 
-            // Hide all content
-            const skillContents = document.querySelectorAll('.skill-content');
-            skillContents.forEach(content => {
-                content.classList.remove('active');
-            });
+    function animateCounter(el) {
+      const target   = parseFloat(el.getAttribute('data-target')) || 0;
+      const duration = 1200;
+      const start    = performance.now();
 
-            // Show current content
-            const target = tab.getAttribute('data-tab');
-            document.getElementById(target).classList.add('active');
-        });
-    });
-});
+      function update(now) {
+        const elapsed  = now - start;
+        const progress = Math.min(elapsed / duration, 1);
+        const value    = target * easeOut(progress);
 
-// ----- PROJECT FILTERING -----
-document.addEventListener('DOMContentLoaded', () => {
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
+        el.textContent = Number.isInteger(target)
+          ? Math.floor(value)
+          : value.toFixed(1);
 
+        if (progress < 1) {
+          requestAnimationFrame(update);
+        } else {
+          el.textContent = target % 1 === 0 ? target : target.toFixed(1);
+        }
+      }
+
+      requestAnimationFrame(update);
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.4 });
+
+    counterEls.forEach(el => counterObserver.observe(el));
+  }
+
+  /* ----------------------------------------------------------
+     8. PROJECT FILTER
+     ---------------------------------------------------------- */
+  const filterBtns      = document.querySelectorAll('.filter-btn');
+  const allProjectCards = document.querySelectorAll('.project-card');
+
+  if (filterBtns.length && allProjectCards.length) {
     filterBtns.forEach(btn => {
-        btn.addEventListener('click', () => {
-            // Set active button
-            filterBtns.forEach(b => b.classList.remove('active'));
-            btn.classList.add('active');
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
 
-            const filter = btn.getAttribute('data-filter');
+        const filter = btn.getAttribute('data-filter') || btn.getAttribute('data-category') || 'all';
 
-            projectCards.forEach(card => {
-                // Show all projects if filter is 'all'
-                if (filter === 'all') {
-                    card.style.display = 'block';
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'scale(1)';
-                    }, 10);
-                } else {
-                    // Show or hide based on category
-                    if (card.getAttribute('data-category').includes(filter)) {
-                        card.style.display = 'block';
-                        setTimeout(() => {
-                            card.style.opacity = '1';
-                            card.style.transform = 'scale(1)';
-                        }, 10);
-                    } else {
-                        card.style.opacity = '0';
-                        card.style.transform = 'scale(0.8)';
-                        setTimeout(() => {
-                            card.style.display = 'none';
-                        }, 300);
-                    }
-                }
-            });
+        allProjectCards.forEach(card => {
+          const cardCategories = (card.getAttribute('data-category') || '').split(/\s+/);
+          const isMatch = filter === 'all' || cardCategories.includes(filter);
+
+          if (!isMatch) {
+            card.classList.remove('card-visible');
+            card.classList.add('card-hidden');
+            setTimeout(() => {
+              if (card.classList.contains('card-hidden')) {
+                card.style.display = 'none';
+              }
+            }, 200);
+          } else {
+            card.style.display = 'block';
+            void card.offsetWidth;
+            card.classList.remove('card-hidden');
+            card.classList.add('card-visible');
+          }
         });
+      });
     });
-});
 
-// ----- COUNTER ANIMATION -----
-document.addEventListener('DOMContentLoaded', () => {
-    const counters = document.querySelectorAll('.counter');
-
-    const counterObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const counter = entry.target;
-                const target = parseInt(counter.getAttribute('data-target'));
-                let count = 0;
-                const updateCount = () => {
-                    const speed = 100;
-                    const increment = target / speed;
-
-                    if (count < target) {
-                        count += increment;
-                        counter.innerText = Math.ceil(count);
-                        setTimeout(updateCount, 20);
-                    } else {
-                        counter.innerText = target;
-                    }
-                };
-
-                updateCount();
-                observer.unobserve(counter);
-            }
-        });
-    }, { threshold: 0.5 });
-
-    counters.forEach(counter => {
-        counterObserver.observe(counter);
+    allProjectCards.forEach(card => {
+      card.style.display = 'block';
+      card.classList.add('card-visible');
     });
-});
+  }
 
-// ----- BACK TO TOP BUTTON -----
-window.addEventListener('scroll', () => {
-    const backToTopButton = document.querySelector('.back-to-top');
+  /* ----------------------------------------------------------
+     9. SKILL TABS
+     ---------------------------------------------------------- */
+  const skillTabs     = document.querySelectorAll('.skill-tab');
+  const skillContents = document.querySelectorAll('.skill-content');
 
-    if (window.scrollY > 500) {
-        backToTopButton.classList.add('active');
-    } else {
-        backToTopButton.classList.remove('active');
-    }
-});
+  if (skillTabs.length && skillContents.length) {
+    skillTabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const target = tab.getAttribute('data-tab');
 
-// ----- PARTICLE BACKGROUND FOR HERO SECTION -----
-document.addEventListener('DOMContentLoaded', () => {
-    const particlesContainer = document.querySelector('.particles-container');
+        skillTabs.forEach(t     => t.classList.remove('active'));
+        skillContents.forEach(c => c.classList.remove('active'));
 
-    if (!particlesContainer) return;
-
-    // Create particles
-    for (let i = 0; i < 80; i++) {
-        const particle = document.createElement('div');
-        particle.className = 'particle';
-
-        // Random positioning
-        const posX = Math.random() * 100;
-        const posY = Math.random() * 100;
-        const size = Math.random() * 15 + 5;
-        const duration = Math.random() * 20 + 10;
-        const delay = Math.random() * 10;
-
-        // Set styles
-        particle.style.cssText = `
-            position: absolute;
-            top: ${posY}%;
-            left: ${posX}%;
-            width: ${size}px;
-            height: ${size}px;
-            background-color: rgba(255, 255, 255, ${Math.random() * 0.1 + 0.05});
-            border-radius: 50%;
-            animation: float ${duration}s linear infinite;
-            animation-delay: -${delay}s;
-            z-index: 0;
-        `;
-
-        particlesContainer.appendChild(particle);
-    }
-
-    // Add animation to style
-    const style = document.createElement('style');
-    style.innerHTML = `
-        @keyframes float {
-            0% {
-                transform: translateY(0) translateX(0);
-            }
-            25% {
-                transform: translateY(-20px) translateX(10px);
-            }
-            50% {
-                transform: translateY(0) translateX(20px);
-            }
-            75% {
-                transform: translateY(20px) translateX(10px);
-            }
-            100% {
-                transform: translateY(0) translateX(0);
-            }
-        }
-    `;
-    document.head.appendChild(style);
-});
-
-// ----- CONTACT FORM SUBMISSION -----
-document.addEventListener('DOMContentLoaded', () => {
-    const contactForm = document.getElementById('contact-form');
-
-    if (contactForm) {
-        contactForm.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            // Get form data
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-
-            // In a real application, you would send this data to a server
-            // For now, just log it and show a success message
-            console.log('Form submission:', { name, email, subject, message });
-
-            // Reset form
-            contactForm.reset();
-
-            // Show success message (in a real application)
-            alert('Thank you for your message! I will get back to you soon.');
-        });
-    }
-});
-
-// ----- SMOOTH SCROLL FOR ANCHOR LINKS -----
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-
-        const targetId = this.getAttribute('href');
-        if (targetId === '#') return;
-
-        const targetElement = document.querySelector(targetId);
-        if (targetElement) {
-            window.scrollTo({
-                top: targetElement.offsetTop - 80, // Offset for header
-                behavior: 'smooth'
-            });
-        }
+        tab.classList.add('active');
+        const matchingContent = document.getElementById(target) || document.querySelector(`.skill-content[data-tab="${target}"]`);
+        if (matchingContent) matchingContent.classList.add('active');
+      });
     });
+  }
+
+  /* ----------------------------------------------------------
+     10. BACK TO TOP
+     ---------------------------------------------------------- */
+  const backToTopBtn = document.querySelector('.back-to-top');
+
+  if (backToTopBtn) {
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 400) {
+        backToTopBtn.classList.add('active');
+      } else {
+        backToTopBtn.classList.remove('active');
+      }
+    }, { passive: true });
+
+    backToTopBtn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+
+  /* ----------------------------------------------------------
+     11. SMOOTH SCROLL FOR ANCHOR LINKS
+     ---------------------------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
+      const href = anchor.getAttribute('href');
+      if (!href || href === '#') return;
+
+      const target = document.querySelector(href);
+      if (!target) return;
+
+      e.preventDefault();
+      const offset    = 70;
+      const targetTop = target.getBoundingClientRect().top + window.scrollY - offset;
+      window.scrollTo({ top: targetTop, behavior: 'smooth' });
+    });
+  });
+
+  /* ----------------------------------------------------------
+     12. FOOTER YEAR
+     ---------------------------------------------------------- */
+  const footerYear = document.querySelector('#footer-year');
+  if (footerYear) {
+    footerYear.textContent = new Date().getFullYear();
+  }
+
 });
